@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instrument List</title>
+
+    </head>
+    <body>
+        <h1>Stored Instrumentation Data</h1>
+        <table border="1">
+            <tr>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Part Number</th>
+                <th>Range</th>
+
+            </tr>
+            {% for instrument in instruments %}
+            <tr>
+                <td>{{ instrument.manufacturer }}</td>
+                <td>{{ instrument.model }}</td>
+                <td>{{ instrument.part_number }}</td>
+                <td>{{ instrument.range }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{% url 'add_instrument' %}">Add New Instrument</a>
+    </body>
+</html>

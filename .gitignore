@@ -1,0 +1,16 @@
+# Ignore Python and Django related files
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore compiled and log files
+*.log
+
+# Ignore environment settings
+.env 

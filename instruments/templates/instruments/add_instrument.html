@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Instrument</title>
+    </head>
+    <body>
+        <h1>Add New Instrument</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit">Save</button>
+        </form>
+        <br>
+        <a href="{% url 'instrument_list' %}">View Instrument</a>
+    </body>
+</html>
